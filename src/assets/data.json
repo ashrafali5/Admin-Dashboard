@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "value": 43,
+      "heading": "Laptop"
+    },
+    {
+      "value": 100,
+      "heading": "Shoes"
+    },
+    {
+      "value": 78,
+      "heading": "Camera"
+    },
+    {
+      "value": 55,
+      "heading": "Phone"
+    }
+  ]
+}
