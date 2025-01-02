@@ -16,5 +16,36 @@
       "value": 55,
       "heading": "Phone"
     }
+  ],
+
+  "transaction": [
+    {
+      "id": "k3h23io13k",
+      "amount": 5000,
+      "quantity": 5,
+      "discount": 399,
+      "status": "Processing"
+    },
+    {
+      "id": "89usjks4jk",
+      "amount": 3999,
+      "quantity": 2,
+      "discount": 400,
+      "status": "Processing"
+    },
+    {
+      "id": "fo9wjdsld9si",
+      "amount": 9000,
+      "quantity": 8,
+      "discount": 899,
+      "status": "Shipped"
+    },
+    {
+      "id": "89sdhif8fioo",
+      "amount": 7999,
+      "quantity": 8,
+      "discount": 900,
+      "status": "Processing"
+    }
   ]
 }

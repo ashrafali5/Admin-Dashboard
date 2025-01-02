@@ -33,7 +33,12 @@ const columns: Column<DataType>[] = [
 ];
 
 const DashboardTable = ({ data = [] }: { data: DataType[] }) => {
-  return TableHoc<DataType>(columns, data, "transactionBox", "Top Transaction");
+  return TableHoc<DataType>(
+    columns,
+    data,
+    "transactionBox",
+    "Top Transaction"
+  )();
 };
 
 export default DashboardTable;
