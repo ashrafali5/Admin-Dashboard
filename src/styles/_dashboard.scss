@@ -143,5 +143,14 @@
         color: rgba(0, 0, 0, 0.6);
       }
     }
+    .transaction-box {
+      width: 100%;
+      padding: 1rem;
+      overflow-x: auto;
+      > h2 {
+        margin-top: 1.5rem;
+        @include mixin.heading();
+      }
+    }
   }
 }
