@@ -145,7 +145,7 @@ const arr: DataType[] = [
 const Product = () => {
   const [data] = useState<DataType[]>(arr);
   const Table = useCallback(
-    TableHoc<DataType>(columns, data, "dashboardProductBox", "Products"),
+    TableHoc<DataType>(columns, data, "dashboardProductBox", "Products", true),
     []
   );
 

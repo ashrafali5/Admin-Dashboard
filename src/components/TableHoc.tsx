@@ -11,18 +11,30 @@ function TableHoc<T extends Object>(
   columns: Column<T>[],
   data: T[],
   containerClassname: string,
-  heading: string
+  heading: string,
+  showPagination: boolean = false
 ) {
   return function HOC() {
     const options: TableOptions<T> = {
       columns,
       data,
       initialState: {
-        pageSize: 6, 
+        pageSize: 6,
       },
     };
-    const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
-      useTable(options, useSortBy, usePagination);
+    const {
+      getTableProps,
+      getTableBodyProps,
+      headerGroups,
+      page,
+      prepareRow,
+      nextPage,
+      pageCount,
+      state: { pageIndex },
+      previousPage,
+      canNextPage,
+      canPreviousPage,
+    } = useTable(options, useSortBy, usePagination);
     return (
       <div className={containerClassname}>
         <h2 className="heading">{heading}</h2>
@@ -30,7 +42,7 @@ function TableHoc<T extends Object>(
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column: any) => (
+                {headerGroup.headers.map((column) => (
                   <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                     {column.render("Header")}
                     {column.isSorted && (
@@ -60,6 +72,16 @@ function TableHoc<T extends Object>(
             })}
           </tbody>
         </table>
+        {showPagination && (
+          <div>
+            <button disabled={!canPreviousPage} onClick={previousPage}>
+              Prev
+            </button>
+            <button disabled={!canNextPage} onClick={nextPage}>
+              Next
+            </button>
+          </div>
+        )}
       </div>
     );
   };
