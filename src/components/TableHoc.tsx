@@ -29,8 +29,6 @@ function TableHoc<T extends Object>(
       page,
       prepareRow,
       nextPage,
-      pageCount,
-      state: { pageIndex },
       previousPage,
       canNextPage,
       canPreviousPage,
