@@ -18,7 +18,8 @@ function TableHoc<T extends Object>(
       columns,
       data,
       initialState: {
-      }
+        pageSize: 6, 
+      },
     };
     const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
       useTable(options, useSortBy, usePagination);
