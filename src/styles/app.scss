@@ -1,5 +1,6 @@
-@use "_mixin";
-@use "_dashboard";
+@use "mixin";
+@use "dashboard";
+@use "products";
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -84,18 +85,18 @@ table {
       padding: 1rem;
     }
     img {
-      width: 4rem;
       height: 4rem;
-      object-fit: contain;
+      width: 4rem;
       border-radius: 10px;
     }
     a {
       text-decoration: none;
-      background-color: rgba(44, 104, 255, 0.4);
-      color: rgba(44, 104, 255);
-      padding: 0.25rem 0.5rem;
-      border-radius: 10px;
-    }
+      background-color: rgb(60, 0, 70);
+      color: rgb(243, 243, 243);
+      padding: 0.4rem 0.4rem;
+      border-radius: 5px;
+      font-size: smaller;
+    } 
     button {
       width: 2rem;
       height: 2rem;

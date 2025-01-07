@@ -8,7 +8,7 @@ import { BarChart, DoughnutChart } from "../components/Charts";
 import { BiMaleFemale } from "react-icons/bi";
 import DashboardTable from "../components/DashboardTable";
 
-const Dashboard = () => {
+const Dashboard = () => { 
   return (
     <div className="adminContainer">
       {/* sideBar */}

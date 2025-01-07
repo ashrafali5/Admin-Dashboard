@@ -3,6 +3,7 @@ import AdminSideBar from "../components/AdminSideBar";
 import TableHoc from "../components/TableHoc";
 import { Column } from "react-table";
 import { Link } from "react-router-dom";
+import { FaPlus } from "react-icons/fa6";
 
 interface DataType {
   photo: ReactElement;
@@ -55,12 +56,96 @@ const arr: DataType[] = [
     stock: 231,
     action: <Link to="/admin/product/lkjsid">Manage</Link>,
   },
+  {
+    photo: <img src={img} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cock Nigga 2025",
+    price: 699,
+    stock: 3,
+    action: <Link to="/admin/product/sajsklfj">Manage</Link>,
+  },
+  {
+    photo: <img src={img2} alt="MackBook" />,
+    name: "Mackbook",
+    price: 199999,
+    stock: 231,
+    action: <Link to="/admin/product/lkjsid">Manage</Link>,
+  },
+  {
+    photo: <img src={img} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cock Nigga 2025",
+    price: 699,
+    stock: 3,
+    action: <Link to="/admin/product/sajsklfj">Manage</Link>,
+  },
+  {
+    photo: <img src={img2} alt="MackBook" />,
+    name: "Mackbook",
+    price: 199999,
+    stock: 231,
+    action: <Link to="/admin/product/lkjsid">Manage</Link>,
+  },
+  {
+    photo: <img src={img} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cock Nigga 2025",
+    price: 699,
+    stock: 3,
+    action: <Link to="/admin/product/sajsklfj">Manage</Link>,
+  },
+  {
+    photo: <img src={img2} alt="MackBook" />,
+    name: "Mackbook",
+    price: 199999,
+    stock: 231,
+    action: <Link to="/admin/product/lkjsid">Manage</Link>,
+  },
+  {
+    photo: <img src={img} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cock Nigga 2025",
+    price: 699,
+    stock: 3,
+    action: <Link to="/admin/product/sajsklfj">Manage</Link>,
+  },
+  {
+    photo: <img src={img2} alt="MackBook" />,
+    name: "Mackbook",
+    price: 199999,
+    stock: 231,
+    action: <Link to="/admin/product/lkjsid">Manage</Link>,
+  },
+  {
+    photo: <img src={img} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cock Nigga 2025",
+    price: 699,
+    stock: 3,
+    action: <Link to="/admin/product/sajsklfj">Manage</Link>,
+  },
+  {
+    photo: <img src={img2} alt="MackBook" />,
+    name: "Mackbook",
+    price: 199999,
+    stock: 231,
+    action: <Link to="/admin/product/lkjsid">Manage</Link>,
+  },
+  {
+    photo: <img src={img} alt="Shoes" />,
+    name: "Puma Shoes Air Jordan Cock Nigga 2025",
+    price: 699,
+    stock: 3,
+    action: <Link to="/admin/product/sajsklfj">Manage</Link>,
+  },
+  {
+    photo: <img src={img2} alt="MackBook" />,
+    name: "Mackbook",
+    price: 199999,
+    stock: 231,
+    action: <Link to="/admin/product/lkjsid">Manage</Link>,
+  },
 ];
 
 const Product = () => {
   const [data] = useState<DataType[]>(arr);
   const Table = useCallback(
-    TableHoc<DataType>(columns, data, "dashboard-product-box", "Products"),
+    TableHoc<DataType>(columns, data, "dashboardProductBox", "Products"),
     []
   );
 
@@ -71,6 +156,9 @@ const Product = () => {
 
       {/* main */}
       <main>{Table()}</main>
+      <Link to="/admin/product/new" className="createProductBtn">
+        <FaPlus />
+      </Link>
     </div>
   );
 };

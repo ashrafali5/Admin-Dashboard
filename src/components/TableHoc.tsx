@@ -1,4 +1,11 @@
-import { Column, TableOptions, useTable } from "react-table";
+import { HiSortAscending, HiSortDescending } from "react-icons/hi";
+import {
+  Column,
+  TableOptions,
+  useSortBy,
+  usePagination,
+  useTable,
+} from "react-table";
 
 function TableHoc<T extends Object>(
   columns: Column<T>[],
@@ -10,9 +17,11 @@ function TableHoc<T extends Object>(
     const options: TableOptions<T> = {
       columns,
       data,
+      initialState: {
+      }
     };
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-      useTable(options);
+    const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
+      useTable(options, useSortBy, usePagination);
     return (
       <div className={containerClassname}>
         <h2 className="heading">{heading}</h2>
@@ -20,16 +29,25 @@ function TableHoc<T extends Object>(
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th {...column.getHeaderProps()}>
+                {headerGroup.headers.map((column: any) => (
+                  <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                     {column.render("Header")}
+                    {column.isSorted && (
+                      <span>
+                        {column.isSortedDesc ? (
+                          <HiSortDescending />
+                        ) : (
+                          <HiSortAscending />
+                        )}
+                      </span>
+                    )}
                   </th>
                 ))}
               </tr>
             ))}
           </thead>
           <tbody {...getTableBodyProps()}>
-            {rows.map((row) => {
+            {page.map((row) => {
               prepareRow(row);
               return (
                 <tr {...row.getRowProps()}>
