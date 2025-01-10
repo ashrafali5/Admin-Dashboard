@@ -1,6 +1,7 @@
 @use "mixin";
 @use "dashboard";
 @use "products";
+@use "customers";
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -91,12 +92,12 @@ table {
     }
     a {
       text-decoration: none;
-      background-color: rgb(60, 0, 70);
+      background-color: rgb(60, 0, 70) rgb(60, 0, 70);
       color: rgb(243, 243, 243);
       padding: 0.4rem 0.4rem;
       border-radius: 5px;
       font-size: smaller;
-    } 
+    }
     button {
       width: 2rem;
       height: 2rem;
@@ -115,6 +116,26 @@ table {
     }
     &:last-child {
       border-right: none;
+    }
+  }
+}
+
+.tablePagination {
+  @include mixin.flex(row, center, center, 1rem);
+  padding-top: 2rem;
+  > button {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: rgb(60, 0, 70);
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+
+    &:disabled {
+      background-color: #868686;
+      cursor: not-allowed;
     }
   }
 }

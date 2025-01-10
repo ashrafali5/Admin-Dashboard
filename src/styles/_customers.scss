@@ -1,0 +1,7 @@
+@use "mixin";
+.dashboardCustomerBox {
+  @include mixin.square(100%);
+  background-color: #ffffff;
+  padding: 2rem;
+  overflow: auto;
+}
