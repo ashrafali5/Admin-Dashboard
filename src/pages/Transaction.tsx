@@ -62,7 +62,7 @@ const arr: DataType[] = [
     amount: 1200000,
     discount: 130000,
     quantity: 1900,
-    status: <span className="blue">Delevered</span>,
+    status: <span className="blue">Delivered</span>,
     action: <Link to="/admin/transaction/weff">manage</Link>,
   },
 ];
