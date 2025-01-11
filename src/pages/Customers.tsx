@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import AdminSideBar from "../components/AdminSideBar";
 import { ReactElement, useCallback, useState } from "react";
 import { Column } from "react-table";
@@ -48,7 +47,7 @@ const img2 =
 
 const arr: DataType[] = [
   {
-    avatar: <img src={img} alt="Hulk" />,
+    avatar: <img style={{ borderRadius: "50%" }} src={img} alt="Hulk" />,
     name: "Hulk",
     email: "hulk@example.com",
     gender: "male",
@@ -60,7 +59,7 @@ const arr: DataType[] = [
     ),
   },
   {
-    avatar: <img src={img2} alt="Thor" />,
+    avatar: <img style={{ borderRadius: "50%" }} src={img2} alt="Thor" />,
     name: "Thor",
     email: "thor@example.com",
     gender: "male",

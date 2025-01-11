@@ -20,7 +20,7 @@ a {
 .red {
   color: red;
 }
-.purple {
+.blue {
   color: rgb(47, 0, 255);
 }
 .green {
@@ -92,11 +92,15 @@ table {
     }
     a {
       text-decoration: none;
-      background-color: rgb(60, 0, 70) rgb(60, 0, 70);
+      background-color: rgb(60, 0, 70);
       color: rgb(243, 243, 243);
-      padding: 0.4rem 0.4rem;
-      border-radius: 5px;
+      padding: 0.4rem 0.6rem;
+      border-radius: 2px;
       font-size: smaller;
+    }
+    a:hover {
+      background-color: rgba(60, 0, 70, 0.8);
+      transition: 0.3s ease all;
     }
     button {
       width: 2rem;
