@@ -24,7 +24,7 @@
 }
 @mixin inputStyle($w: 100%, $p: 1rem, $bgColor: inherit, $border: none) {
   width: $w;
-  pading: $p;
+  padding: $p;
   background-color: $bgColor;
   border: $border;
   outline: none;

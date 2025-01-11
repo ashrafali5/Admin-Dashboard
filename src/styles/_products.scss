@@ -18,3 +18,157 @@
     opacity: 0.8;
   }
 }
+// for NewProduct
+.newProduct {
+  @include mixin.flex(row, unset, center, 1rem);
+  padding: 4rem;
+  > article {
+    width: 100%;
+    max-width: 25rem;
+    height: 85vh;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    > form {
+      @include mixin.flex(column, unset, center, 2rem);
+
+      > h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.125rem;
+      }
+
+      > img {
+        @include mixin.square(5rem);
+        object-fit: cover;
+        border-radius: 0.3125rem;
+      }
+
+      > div {
+        width: 100%;
+        position: relative;
+
+        > label {
+          position: absolute;
+          top: -1.5rem;
+          left: 0;
+        }
+
+        > input {
+          @include mixin.inputStyle(
+            100%,
+            1rem,
+            unset,
+            1px solid rgba(0, 0, 0, 0.15)
+          );
+          border-radius: 0.3125rem;
+        }
+      }
+      > button {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        background-color: blueviolet;
+        color: #fff;
+        border-radius: 0.3125rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// for ProductManagement
+.productManage {
+  @include mixin.flex(row, unset, center, 1rem);
+  padding: 4rem;
+  > section {
+    width: 100%;
+    max-width: 25rem;
+    height: 85vh;
+    overflow-y: auto;
+    padding: 5rem;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    @include mixin.flex(column, unset, unset, 1rem);
+    position: relative;
+    border-radius: 0.3125rem;
+    > strong {
+      font-weight: 300;
+    }
+    > img {
+      @include mixin.square(100%);
+      object-fit: cover;
+      border-radius: 0.3125rem;
+    }
+    > span {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+    }
+    > p {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.125rem;
+    }
+    > h3 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  > article {
+    width: 100%;
+    max-width: 25rem;
+    height: 85vh;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    > form {
+      @include mixin.flex(column, unset, center, 2rem);
+
+      > h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.125rem;
+      }
+
+      > img {
+        @include mixin.square(5rem);
+        object-fit: cover;
+        border-radius: 0.3125rem;
+      }
+
+      > div {
+        width: 100%;
+        position: relative;
+
+        > label {
+          position: absolute;
+          top: -1.5rem;
+          left: 0;
+        }
+
+        > input {
+          @include mixin.inputStyle(
+            100%,
+            1rem,
+            unset,
+            1px solid rgba(0, 0, 0, 0.15)
+          );
+          border-radius: 0.3125rem;
+        }
+      }
+      > button {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        background-color: blueviolet;
+        color: #fff;
+        border-radius: 0.3125rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
