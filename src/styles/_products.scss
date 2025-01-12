@@ -20,7 +20,7 @@
 }
 // for NewProduct
 .newProduct {
-  @include mixin.flex(row, unset, center, 1rem);
+  @include mixin.flex(row, center, center, 1rem);
   padding: 4rem;
   > article {
     width: 100%;
