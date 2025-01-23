@@ -14,6 +14,7 @@
       font-size: 1.2rem;
       opacity: 0.5;
     }
+
     > img {
       @include mixin.square(2rem);
       border-radius: 50%;
